@@ -1,10 +1,15 @@
 <script>
     let { data } = $props()
-    console.log(`data.id: ${data.id}`)
+    let artist = data.artist.data
+    
 </script>
 
 <div>
     Artist ID: { data.id }
 
-    {data.artists}
+    <div>
+        <p>{artist.name}</p>
+        <p>{artist.song_count} song(s)</p>
+    </div>
+    
 </div>

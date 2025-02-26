@@ -6,7 +6,7 @@
 <nav class="flex">
 	<div class="flex space-x-3">
 		<a href="/">Home</a>
-		<a href="/songs">Songs</a>
+		<a href="/artists">Artists</a>
 	</div>
 </nav>
 

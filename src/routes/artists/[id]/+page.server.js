@@ -1,14 +1,14 @@
+import { API_URL } from '$env/static/private'
+
 export async function load({params}) {
-    console.log(`params.id: ${params.id}`)
+    const response = await fetch(`${API_URL}/api/artists/${params.id}`)
 
-    const response = await fetch(`http://laravel441-laravel.test-1/api/artists/${params.id}`)
+    const artist = await response.json()
 
-    const artists = await response.json()
-
-    console.log(artists)
+    console.log(artist)
 
     return {
         id: params.id,
-        artists: artists
+        artist: artist
     }
 }
